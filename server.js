@@ -42,7 +42,7 @@ var articles = {
 };
 
 // Function to manipulate the articleOne object
-
+// backquote(`) to insert multiline string
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
