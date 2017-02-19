@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 //  Variable articles with objects as contents
 var articles = {
     // Objects
-    'article-one' = {
+    'article-one': {
                 title: 'Article One | Charly Jose',
                 heading: ' Article One',
                 date: 'Feb 19, 2017',
@@ -21,7 +21,7 @@ var articles = {
                         <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article.
                         </p>`
     }, 
-    'article-two' = {
+    'article-two': {
                 title: 'Article Two | Charly Jose',
                 heading: ' Article Two',
                 date: 'Feb 19, 2017',
@@ -30,7 +30,7 @@ var articles = {
                             This is the content for the second article.
                         </p>`
     },
-    'article-three' = {
+    'article-three': {
                 title: 'Article Three | Charly Jose',
                 heading: ' Article Three',
                 date: 'Feb 19, 2017',
