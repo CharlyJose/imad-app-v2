@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-   res.send(createTempate(articleOne));  //sending back a string file
+   res.send(createTemplate(articleOne));  //sending back a string file
 });
 
 app.get('/Article-two', function(req,res){
