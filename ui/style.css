@@ -1,106 +1,22 @@
-body{
-  background: url("http://www.walldevil.com/wallpapers/a95/abstract-wallpapers-ultra-patterns-texture-backgrounds-painted-wallpaper.jpg") no-repeat fixed 100% ;
-  background-position: center;
-  background-attachment: fixed;
+body {
+    font-family: sans-serif;
+    background-color: lightgrey;
+    margin-top: 75px;
 }
 
-/*
-.container_12{background:#e3e3e3
-}*/
-
-.header2{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  color: black;
-  font-size: 220px;
-  font-family: 'Anton', sans-serif;
-  margin-left: 0px;
-  letter-spacing: -1px;
-  opacity: 0.5;
+.center {
+    text-align: center;
 }
 
-iframe{margin-top: 6px;}
-
-nav li{
-  display:inline;
-  margin-left:15px;
-  padding-right: 15px;
+.text-big {
+    font-size: 300%;
 }
 
-.bottom{
-  margin-top: 15px;
-  margin-left: 500px;  }
-
-.head{
-  font-size: 50px;
-  font-family: 'Baloo Thambi', cursive;
-  color:#4A235A;
-  letter-spacing: 6px;
+.bold {
+    font-weight: bold;
 }
 
-a{
-  text-decoration: none;
-  color:#4A235A;
-}
-#headh:hover{color:#4A235A;}
-
-a:hover{color:#D2B4DE ;}
-
-.primary{
-          color:#000099
-
+.img-medium {
+    height: 200px;
 }
 
-aside{background: #A3E4D7 ;}
-
-header{
-  font-size: 16px;
-  background:#C39BD3;
-}
-
-.main{margin:30px 0px;}
-
-nav{
-  background:#FADBD8;
-  font-size: 17px;
-  font-family: 'Cuprum', sans-serif;
-}
-
-section{
-  margin-top: 10px;
-  color: bla;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 5px;
-}
-
-.bottom{
-  margin: center;
-  margin-top: 500px;
-  margin-bottom: 10px;
-}
-
-.box{
-  width:1498px;
-  height:100px;
-  opacity: 0.5;
-}
-
-.blue{
-  background:#425cf4;
-  padding-bottom: 50px;
-  margin-bottom: 300px;
-}
-
-h2{
-  margin-left:1350px;
-  font-family: 'Karla', sans-serif;
-}
-
-.bottom_ref{
-          color: #330066;
-}
-.bottom_ref:hover{color: black;}
