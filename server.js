@@ -5,19 +5,40 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-// Creating articleOne object
-
-var articleOne = {
-    title: 'Article One | Charly Jose',
-    heading: ' Article One',
-    date: 'Feb 19, 2017',
-    content:`
-            <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. 
-            </p>
-            <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article.  
-            </p>
-            <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article.
-            </p>`
+    
+//  Variable articles with objects as contents
+var articles = {
+    // Objects
+    'article-one' = {
+                title: 'Article One | Charly Jose',
+                heading: ' Article One',
+                date: 'Feb 19, 2017',
+                content:`
+                        <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. 
+                        </p>
+                        <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article.  
+                        </p>
+                        <p>This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article. This is the content for the first article.
+                        </p>`
+    }, 
+    'article-two' = {
+                title: 'Article Two | Charly Jose',
+                heading: ' Article Two',
+                date: 'Feb 19, 2017',
+                content:`
+                        <p>
+                            This is the content for the second article.
+                        </p>`
+    },
+    'article-three' = {
+                title: 'Article Three | Charly Jose',
+                heading: ' Article Three',
+                date: 'Feb 19, 2017',
+                content:`
+                        <p>
+                            This is the content for the thrid article.
+                        </p>`
+    }
 };
 
 // Function to manipulate the articleOne object
@@ -65,16 +86,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-   res.send(createTemplate(articleOne));  //sending back a string file
-});
-
-app.get('/Article-two', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/Article-three', function(req,res){
-   res.sendfile(path.join(__dirname, 'ui', 'article-three.html'));
+// :articleName  --- A feature of Express framework  -- which converts :articleName to a variable
+app.get('/:articleName', function(req,res){
+    //  articleName == article-one    
+    // Extracting the articleName value from :articleName
+    var articleName = req.params.articleName;
+    //  articles[articleaName] == {} content object for article one
+    res.send(createTemplate(articles[articleName]));  //sending back a string file
 });
 
 app.get('/ui/style.css', function (req, res) {
